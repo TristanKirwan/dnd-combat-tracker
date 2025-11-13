@@ -5,20 +5,20 @@
 @theme static {
 	/* Colors */
 
-	--color-black: var(--color-black-300);
-	--color-black-100: hsl(240, 6%, 5%);
-	--color-black-200: hsl(240, 6%, 10%);
-	--color-black-300: hsl(240, 6%, 15%);
-	--color-black-400: hsl(240, 6%, 20%);
-	--color-black-500: hsl(240, 6%, 25%);
+	--color-background: var(--color-background-100);
+	--color-background-100: hsl(240, 6%, 15%);
+	--color-background-200: hsl(240, 6%, 20%);
+	--color-background-300: hsl(240, 6%, 25%);
+	--color-background-400: hsl(240, 6%, 30%);
+	--color-background-500: hsl(240, 6%, 35%);
+	--color-background-600: hsl(240, 6%, 40%);
 
-	--color-white: var(--color-white-300);
-	--color-white-100: hsl(240, 6%, 100%);
-	--color-white-200: hsl(240, 6%, 95%);
-	--color-white-300: hsl(240, 6%, 90%);
-	--color-white-400: hsl(240, 6%, 85%);
-	--color-white-500: hsl(240, 6%, 80%);
+	--color-foreground: var(--color-foreground-100);
+	--color-foreground-100: hsl(240, 6%, 100%);
+	--color-foreground-200: hsl(240, 6%, 95%);
+	--color-foreground-300: hsl(240, 6%, 90%);
 
+	--color-primary: var(--color-primary-100);
 	--color-primary-100: hsl(60 100% 45%);
 	--color-primary-200: hsl(60 100% 40%);
 	--color-primary-300: hsl(60 100% 35%);
@@ -40,6 +40,10 @@
 	--text-heading-6--line-height: var(--text-heading-6--line-height);
 	--text-paragraph: var(--text-paragraph);
 	--text-paragraph--line-height: var(--text-paragraph--line-height);
+
+	/* Shadows */
+	--shadow-sm:
+		inset 0px 1px 2px var(--color-background-300), inset 0px 1px 2px var(--color-background-400);
 }
 
 @utility max-w-site {
@@ -126,6 +130,6 @@ body {
 		'ccmp',
 		'locl',
 		'kern';
-	background-color: var(--color-black);
-	color: var(--color-white);
+	background-color: var(--color-background);
+	color: var(--color-foreground);
 }

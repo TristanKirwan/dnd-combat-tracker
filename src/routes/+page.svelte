@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Container from '$lib/components/container.svelte';
+</script>
+
+<main>
+	<Container>
+		<h1>D&D Combat tracker</h1>
+	</Container>
+</main>
