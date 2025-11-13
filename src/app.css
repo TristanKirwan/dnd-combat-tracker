@@ -15,15 +15,15 @@
 
 	--color-foreground: var(--color-foreground-100);
 	--color-foreground-100: hsl(240, 6%, 100%);
-	--color-foreground-200: hsl(240, 6%, 95%);
-	--color-foreground-300: hsl(240, 6%, 90%);
+	--color-foreground-200: hsl(240, 6%, 85%);
+	--color-foreground-300: hsl(240, 6%, 70%);
 
 	--color-primary: var(--color-primary-100);
 	--color-primary-100: hsl(60 100% 45%);
-	--color-primary-200: hsl(60 100% 40%);
-	--color-primary-300: hsl(60 100% 35%);
-	--color-primary-400: hsl(60 100% 30%);
-	--color-primary-500: hsl(60 100% 25%);
+	--color-primary-200: hsl(60 100% 42.5%);
+	--color-primary-300: hsl(60 100% 40%);
+	--color-primary-400: hsl(60 100% 37.5%);
+	--color-primary-500: hsl(60 100% 35%);
 
 	/* Typography */
 	--text-heading-1: var(--text-heading-1);
@@ -46,13 +46,54 @@
 		inset 0px 1px 2px var(--color-background-300), inset 0px 1px 2px var(--color-background-400);
 }
 
-@utility max-w-site {
-	max-width: var(--max-w-site);
-}
+@layer utilities {
+	/* Font settings */
+	.font-thin {
+		font-variation-settings: 'wght' 100;
+		font-weight: 100;
+	}
+	.font-extralight {
+		font-variation-settings: 'wght' 200;
+		font-weight: 200;
+	}
+	.font-light {
+		font-variation-settings: 'wght' 300;
+		font-weight: 300;
+	}
+	.font-normal {
+		font-variation-settings: 'wght' 400;
+		font-weight: 400;
+	}
+	.font-medium {
+		font-variation-settings: 'wght' 500;
+		font-weight: 500;
+	}
+	.font-semibold {
+		font-variation-settings: 'wght' 600;
+		font-weight: 600;
+	}
+	.font-bold {
+		font-variation-settings: 'wght' 700;
+		font-weight: 700;
+	}
+	.font-extrabold {
+		font-variation-settings: 'wght' 800;
+	}
+	.font-black {
+		font-variation-settings: 'wght' 900;
+		font-weight: 900;
+	}
 
-@utility px-site {
-	padding-left: var(--spacing-site);
-	padding-right: var(--spacing-site);
+	/* Spacing settings */
+
+	.max-w-site {
+		max-width: var(--max-w-site);
+	}
+
+	.px-site {
+		padding-left: var(--spacing-site);
+		padding-right: var(--spacing-site);
+	}
 }
 
 :root {
@@ -75,6 +116,8 @@
 	--text-heading-6--line-height: 1.2;
 	--text-paragraph: 0.875rem;
 	--text-paragraph--line-height: 1.2;
+
+	--navbar-height: 4rem;
 }
 
 @media (min-width: 1024px) {

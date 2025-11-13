@@ -2,7 +2,9 @@
 	import Container from './container.svelte';
 </script>
 
-<nav class="pt-4">
+<div class="mb-8 h-(--navbar-height)" />
+
+<nav class="fixed top-0 left-0 z-10 w-full pt-4">
 	<Container class="flex justify-center">
 		<ul class="flex items-center gap-x-6 rounded-full bg-background-200 px-4 py-3 shadow-sm">
 			<a href="/" aria-label="Home">
