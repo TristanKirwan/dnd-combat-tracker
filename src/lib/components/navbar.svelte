@@ -2,7 +2,7 @@
 	import Container from './container.svelte';
 </script>
 
-<div class="mb-8 h-(--navbar-height)" />
+<div class="mb-8 h-(--navbar-height)"></div>
 
 <nav class="fixed top-0 left-0 z-10 w-full pt-4">
 	<Container class="flex justify-center">

@@ -4,8 +4,8 @@
 	import Form from './forms/form.svelte';
 	import TextInput from './forms/textinput.svelte';
 
-	import { inputsAreString } from '$lib/helpers/forms';
 	import { addPresetCombatant } from '$lib/helpers/localstorage';
+	import { inputsAreString, isCombatant } from '../../types/guards';
 
 	function onsubmit(event: SubmitEvent) {
 		if (!event.target) return;
@@ -17,20 +17,18 @@
 			notes: formData.get('notes') || ''
 		};
 
-		const inputsAreValid = inputsAreString(combatant);
-		if (!inputsAreValid) {
+		const isStringInputs = inputsAreString(combatant);
+		if (!isStringInputs || !isCombatant(combatant)) {
 			// TODO: make pretty notification
 			alert('Invalid inputs');
 			return;
 		}
 
-		// TODO: Fix typescript issue
 		addPresetCombatant(combatant);
 
 		// TODO: Make nice notification
 		alert('Combatant added');
-		// TODO: Fix type error
-		event.currentTarget?.reset();
+		(event.currentTarget as HTMLFormElement)?.reset();
 	}
 </script>
 
