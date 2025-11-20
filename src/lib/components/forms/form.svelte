@@ -1,9 +1,22 @@
-<script>
-	let { children, class: className, title, description } = $props();
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	let {
+		children,
+		title,
+		description,
+		onsubmit
+	}: {
+		children: Snippet;
+		title?: string;
+		description?: string;
+		onsubmit: (event: SubmitEvent) => void;
+	} = $props();
 </script>
 
 <form
 	class="flex flex-col gap-y-4 rounded-lg border border-background-300 bg-background-200 px-5 py-6 shadow-sm"
+	{onsubmit}
 >
 	{#if title || description}
 		<div>

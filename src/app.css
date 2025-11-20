@@ -25,22 +25,6 @@
 	--color-primary-400: hsl(60 100% 37.5%);
 	--color-primary-500: hsl(60 100% 35%);
 
-	/* Typography */
-	--text-heading-1: var(--text-heading-1);
-	--text-heading-1--line-height: var(--text-heading-1--line-height);
-	--text-heading-2: var(--text-heading-2);
-	--text-heading-2--line-height: var(--text-heading-2--line-height);
-	--text-heading-3: var(--text-heading-3);
-	--text-heading-3--line-height: var(--text-heading-3--line-height);
-	--text-heading-4: var(--text-heading-4);
-	--text-heading-4--line-height: var(--text-heading-4--line-height);
-	--text-heading-5: var(--text-heading-5);
-	--text-heading-5--line-height: var(--text-heading-5--line-height);
-	--text-heading-6: var(--text-heading-6);
-	--text-heading-6--line-height: var(--text-heading-6--line-height);
-	--text-paragraph: var(--text-paragraph);
-	--text-paragraph--line-height: var(--text-paragraph--line-height);
-
 	/* Shadows */
 	--shadow-sm:
 		inset 0px 1px 2px var(--color-background-300), inset 0px 1px 2px var(--color-background-400);
@@ -96,40 +80,31 @@
 	}
 }
 
+@utility text-heading-1 {
+	@apply text-4xl leading-tight md:text-5xl;
+}
+@utility text-heading-2 {
+	@apply text-3xl leading-tight md:text-4xl;
+}
+@utility text-heading-3 {
+	@apply text-2xl leading-tight md:text-3xl;
+}
+@utility text-heading-4 {
+	@apply text-xl leading-tight md:text-2xl;
+}
+@utility text-heading-5 {
+	@apply text-lg leading-tight md:text-xl;
+}
+@utility text-heading-6 {
+	@apply text-base leading-tight md:text-lg;
+}
+
 :root {
 	/* Spacings */
 	--max-w-site: 90rem;
 	--spacing-site: 1.5rem;
 
-	/* Typography */
-	--text-heading-1: 2.613rem;
-	--text-heading-1--line-height: 1.2;
-	--text-heading-2: 2.177rem;
-	--text-heading-2--line-height: 1.2;
-	--text-heading-3: 1.814rem;
-	--text-heading-3--line-height: 1.2;
-	--text-heading-4: 1.512rem;
-	--text-heading-4--line-height: 1.2;
-	--text-heading-5: 1.26rem;
-	--text-heading-5--line-height: 1.2;
-	--text-heading-6: 1.05rem;
-	--text-heading-6--line-height: 1.2;
-	--text-paragraph: 0.875rem;
-	--text-paragraph--line-height: 1.2;
-
 	--navbar-height: 4rem;
-}
-
-@media (min-width: 1024px) {
-	:root {
-		--text-heading-1: 3.135rem;
-		--text-heading-2: 2.613rem;
-		--text-heading-3: 2.177rem;
-		--text-heading-4: 1.814rem;
-		--text-heading-5: 1.512rem;
-		--text-heading-6: 1.26rem;
-		--text-paragraph: 1.05rem;
-	}
 }
 
 body {
@@ -175,4 +150,11 @@ body {
 		'kern';
 	background-color: var(--color-background);
 	color: var(--color-foreground);
+	font-size: 0.875rem;
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		font-size: 1rem;
+	}
 }

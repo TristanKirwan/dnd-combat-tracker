@@ -1,12 +1,11 @@
 <script>
-	import Container from '$lib/components/container.svelte';
-	import Tile from '$lib/components/tile.svelte';
 	import CombatantEntryForm from '$lib/components/combatantEntryForm.svelte';
+	import Container from '$lib/components/container.svelte';
 </script>
 
 <main>
 	<Container>
-		<div class="grid gap-4 lg:grid-cols-2">
+		<div class="grid justify-center gap-4 lg:grid-cols-2">
 			<div class="flex max-w-lg flex-col gap-y-2 lg:justify-self-end">
 				<h1 class="text-heading-2 font-bold">Prepare for an encounter</h1>
 				<p>
